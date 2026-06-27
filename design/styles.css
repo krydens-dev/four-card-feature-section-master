@@ -1,6 +1,11 @@
 :root {
     --font-popins: "Poppins", sans-serif;
     --clr-gray-500: hsl(234 12% 34%);
+    --clr-gray-400: hsl(212 6% 44%);
+    --clr-cyan: hsl(180 62% 55%);
+    --clr-red: hsl(0 78% 62%);
+    --clr-blue: hsl(212 86% 64%);
+    --clr-orange: hsl(34 97% 64%);
 }
 
 * {
@@ -33,7 +38,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid red;
 }
 
 .hero__title {
@@ -61,21 +65,90 @@ body {
 /* Features */
 
 .features {
-    border: 1px solid blue;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
 }
 
 .features-card {
-    border: 1px solid green;
+
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    max-width: 19.7rem;
     gap: 2rem;
     border-radius: .5rem;
+    box-shadow: 0px 15px 30px -11px hsla(213, 47%, 67%, 50%);
+    
+}
+
+.features-card--cyan {
+    border-top: .25rem solid var(--clr-cyan);
+}
+
+.features-card--red {
+    border-top: .25rem solid var(--clr-red); ;
+}
+
+.features-card--orange {
+    border-top: .25rem solid var(--clr-orange);
+}
+
+.features-card--blue {
+    border-top: .25rem solid var(--clr-blue);
+}
+
+.features-card__title {
+    color: var(--clr-gray-500);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: .375rem;
+}
+
+.features-card__description {
+    color: var(--clr-gray-400);
+    font-size: .812rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: .09px;
 }
 
 .features-card__icon {
     display: flex;
     justify-content: flex-end;
-    border: 1px solid yellow;
 
+}
+@media (min-width: 750px) {
+    .features{
+        display: grid;
+        grid-template-columns: repeat(3, 19.7rem);
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    /* cyan - Supervisor: middle column, row 1 */
+    .features-card--cyan {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* red - Team Builder: left column, row 2 */
+    .features-card--red {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* orange - Karma: right column, row 2 */
+    .features-card--orange {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    /* blue - Calculator: middle column, row 3 */
+    .features-card--blue {
+        grid-column: 2;
+        grid-row: 3;
+    }
 }
