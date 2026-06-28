@@ -121,34 +121,33 @@ body {
 
 }
 @media (min-width: 750px) {
-    .features{
-        display: grid;
-        grid-template-columns: repeat(3, 19.7rem);
-        gap: 2rem;
-        justify-content: center;
-    }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 
-    /* cyan - Supervisor: middle column, row 1 */
-    .features-card--cyan {
-        grid-column: 1;
-        grid-row: 2;
-    }
+  .features-card--cyan {
+    grid-column: span 4/6;
+    grid-row: span 1;
+    justify-self: center;
+  }
 
-    /* red - Team Builder: left column, row 2 */
-    .features-card--red {
-        grid-column: 2;
-        grid-row: 1;
-    }
+  .features-card--red {
+    grid-column: 2/6;
+    grid-row: 2;
+  
+  }
 
-    /* orange - Karma: right column, row 2 */
-    .features-card--orange {
-        grid-column: 3;
-        grid-row: 2;
-    }
+  .features-card--orange {
+    grid-column: span 2/6;
+   grid-row: 2;
+  }
 
-    /* blue - Calculator: middle column, row 3 */
-    .features-card--blue {
-        grid-column: 2;
-        grid-row: 3;
-    }
+  .features-card--blue {
+    grid-column: span 4/6;
+   grid-row: 3;
+   justify-self: center;
+  }
+
 }
