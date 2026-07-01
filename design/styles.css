@@ -16,10 +16,6 @@
 
 body {
     font-family: var(--font-popins);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .page-wrapper {
@@ -48,6 +44,7 @@ body {
     line-height: 1.4;
     letter-spacing: .25px;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .hero__title-accent {
@@ -89,7 +86,7 @@ body {
 }
 
 .features-card--red {
-    border-top: .25rem solid var(--clr-red); ;
+    border-top: .25rem solid var(--clr-red);
 }
 
 .features-card--orange {
@@ -124,7 +121,7 @@ body {
 
 /* Tablet */
 
-@media (min-width: 750px) {
+@media (min-width: 720px) {
 
     .hero {
         min-width: 33.75rem;
@@ -174,6 +171,10 @@ body {
                             "supervisor builder calculator"
                             "supervisor karma calculator"
                             "supervisor karma calculator";
+    }
+
+    .features-card {
+        max-width: 21.9rem;
     }
 
     .features-card--cyan {
